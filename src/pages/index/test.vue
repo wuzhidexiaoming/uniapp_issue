@@ -1,25 +1,22 @@
 <template>
   <view class="content">
-    <image class="logo" src="/static/logo.png"></image>
     <view>
-      <text class="title">{{ title }}</text>
-    </view>
-    <view>
-      <text>Text组件</text>
-      <Test />
+      我是test组件
+
+      <view>
+        我是来自 index.vue组件的变量
+        {{ TEST }}
+      </view>
     </view>
   </view>
 </template>
 
 <script>
-export const TEST = "test"
-import Test from "./test.vue"
+import { TEST } from "./index"
 export default {
-  components: {
-    Test,
-  },
   data() {
     return {
+      TEST,
       title: "Hello",
     }
   },

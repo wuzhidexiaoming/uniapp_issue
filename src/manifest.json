@@ -13,12 +13,11 @@
 			"autoclose": true,
 			"delay": 0
 		},
-		"modules": { /* 模块配置 */
-
-		},
+		"modules": { /* 模块配置 */},
 		"distribute": { /* 应用发布信息 */
 			"android": { /* android打包配置 */
-				"permissions": ["<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+				"permissions": [
+					"<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
 					"<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
 					"<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
 					"<uses-permission android:name=\"android.permission.VIBRATE\"/>",
@@ -42,34 +41,44 @@
 					"<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
 				]
 			},
-			"ios": { /* ios打包配置 */
-
-			},
-			"sdkConfigs": { /* SDK配置 */
-
-			}
+			"ios": { /* ios打包配置 */},
+			"sdkConfigs": { /* SDK配置 */}
 		}
 	},
-	"quickapp": { /* 快应用特有相关 */
-
-	},
-	"mp-weixin": { /* 微信小程序特有相关 */
-		"appid": "",
+	"quickapp": { /* 快应用特有相关 */},
+	"mp-weixin": {
+		"scopedSlotsCompiler": "augmented",
+		"appid": "xxxx",
 		"setting": {
-			"urlCheck": false
+			"urlCheck": false,
+			"postcss": true,
+			"minified": true,
+			"es6": true
 		},
+		"usingComponents": true,
+		// 去掉重复文件
+		// "sitemapLocation" : "sitemap.json",
+		"permission": {
+			"scope.userLocation": {
+				"desc": "你的位置信息将用于小程序位置接口的效果展示"
+			}
+		},
+		"optimization": {
+			"subPackages": true
+		},
+		"lazyCodeLoading": "requiredComponents",
+		"scopedSlotsCompiler": "augmented"
+	},
+	"mp-alipay": {
 		"usingComponents": true
 	},
-	"mp-alipay" : {
-        "usingComponents" : true
-    },
-    "mp-baidu" : {
-        "usingComponents" : true
-    },
-    "mp-toutiao" : {
-        "usingComponents" : true
-    },
-    "mp-qq" : {
-        "usingComponents" : true
-    }
+	"mp-baidu": {
+		"usingComponents": true
+	},
+	"mp-toutiao": {
+		"usingComponents": true
+	},
+	"mp-qq": {
+		"usingComponents": true
+	}
 }
