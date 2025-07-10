@@ -12,6 +12,7 @@
 </template>
 
 <script>
+// 从 index.vue 中导入 TEST 变量
 import { TEST } from "./index"
 export default {
   data() {

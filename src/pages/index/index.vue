@@ -13,6 +13,7 @@
 
 <script>
 export const TEST = "test"
+// 导入 test.vue 组件，text组件导入了上面的 TEST 变量
 import Test from "./test.vue"
 export default {
   components: {

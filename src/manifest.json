@@ -53,7 +53,7 @@
 			"urlCheck": false,
 			"postcss": true,
 			"minified": true,
-			"es6": true
+			"es6": false
 		},
 		"usingComponents": true,
 		// 去掉重复文件
